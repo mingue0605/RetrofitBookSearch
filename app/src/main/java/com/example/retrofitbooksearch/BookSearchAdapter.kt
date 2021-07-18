@@ -30,10 +30,9 @@ class BookSearchAdapter(private val context: Context)  : RecyclerView.Adapter<Bo
         private val bookLike : ImageView = itemView.findViewById(R.id.like)
 
         fun bind(item : BookData){
-            Glide.with(itemView).load(item.bookImg).into(bookImg)
-            bookTitle.text = item.bookTitle
-            bookDetail.text = item.bookDetail
-            Glide.with(itemView).load(item.like).into(bookLike)
+//            Glide.with(itemView).load(item.bookImg).into(bookImg)
+//            bookTitle.text = item.bookTitle
+//            bookDetail.text = item.bookDetail
         }
     }
 }

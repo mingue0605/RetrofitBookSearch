@@ -7,14 +7,38 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_Constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="검색"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/search_btn"
+            android:layout_marginRight="20dp" />
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/book"
+            app:layout_constraintStart_toEndOf="@id/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/book_recycler"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_Constraint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:layout_marginTop="20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
