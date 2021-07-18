@@ -6,7 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/book_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutMananger = "androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation ="vertical"
+        tools:listitem="@layout/item_book_search"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
